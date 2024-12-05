@@ -1,0 +1,71 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devmobile.myapp">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".components.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AppBase"
+            android:exported="true" />
+        <activity android:name=".login.LoginActivity"
+            android:exported="true" />
+        <activity android:name=".register.RegisterActivity"
+            android:exported="true" />
+        <activity android:name=".profile.ProfileActivity"
+            android:exported="false" />
+        <activity android:name=".profile.StudentRegistration"
+            android:exported="false" />
+        <activity android:name=".profile.EditStudentActivity"
+            android:exported="false" />
+        <activity android:name=".components.SettingsActivity"
+            android:exported="false" />
+        <activity android:name=".components.About"
+            android:exported="false" />
+        <activity android:name=".attendance.AttendanceActivity"
+            android:exported="false" />
+        <activity android:name=".notes.NoteActivity"
+            android:exported="false" />
+        <activity android:name=".notes.NoteCreate"
+            android:exported="false" />
+        <activity android:name=".notes.UpdateNoteActivity"
+            android:exported="false" />
+        <activity android:name=".schedule.Scheduler"
+            android:exported="false" />
+        <activity android:name=".schedule.CreateScheduleActivity"
+            android:exported="false" />
+        <activity android:name=".schedule.UpdateScheduleActivity"
+            android:exported="false" />
+        <receiver android:name=".notification.AlarmReceiver" />
+
+        <activity android:name=".components.ManageAccountActivity"
+            android:exported="true" />
+
+        <service android:name=".services.ConnectivityService" />
+
+    </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+</manifest>
